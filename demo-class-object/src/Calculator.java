@@ -76,5 +76,13 @@ public class Calculator {
         
         Calculator.test2(new String[] {"abc","ijk"});
         Calculator.test2("abc","ijk"); //flexible with...
+
+        Calculator c2 = new Calculator();
+        new Calculator().setNum1(3); // can do but you cannot recall this. you don't have its address in memory
+        
+        System.out.println(c2.sum(3,2)); //this is a static method; it can be called by instant (Object) or Class Name
+        System.out.println(c2.sum()); //instant method, it can only be called by Object.
+        c2.sum();
+        c2.sum(3.0,2.1);
     }
 }

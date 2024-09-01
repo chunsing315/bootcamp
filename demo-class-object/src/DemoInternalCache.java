@@ -1,4 +1,4 @@
-public class DemoInteger {
+public class DemoInternalCache {
     public static void main(String[] args) {
         Integer i1 = Integer.valueOf(3); 
         Integer i2 = 3; // 3 int value -> autobox (what is this) -> integer object (~heap memory)
@@ -20,5 +20,24 @@ public class DemoInteger {
 
         System.out.println(i3 >= i4); //not meaningful
         System.out.println(i1 >= i2); //not meaningful
+        
+        //internal cache
+        
+        Double d1 = 128.12345d; // autobox: double value -> Double Object
+        Double d2 = 128.12345d;
+        System.out.println(d1 == d2); 
+        //autobox
+        Boolean b1 = true; 
+
+        Boolean b2 = true; 
+        System.out.println(b1 == b2); 
+        
+        
+        Character c1 = 'c'; 
+        Character c2 = 'c'; 
+        System.out.println(c1 == c2);         
+        Character c3='我';
+        Character c4='我';
+        System.out.println(c3 == c4); //only -128 to 127 character. (only 256 value)
     }   
 }

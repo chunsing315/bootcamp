@@ -5,9 +5,10 @@ public class DemoThreadCreation {
         x++;// 2
         ++x;// 3
 
-        // a thread is a process. like the process is on when you run this.
+        // Method 2: a thread is a process. like the process is on when you run this.
         // Java can have two thread.
 
+        // Method 2: new Task.Class
         Task task1 = new Task();
         Thread thread1 = new Thread(task1); //thread to store the task object
         Thread thread2 = new Thread(()->{
@@ -29,6 +30,7 @@ public class DemoThreadCreation {
         } catch (InterruptedException e){
         }
 
+        // Method 3 to declare the task extends Thread.  Suitable for reusable class.
         AddStringMillionTimeThread thread3 = new AddStringMillionTimeThread();
         thread3.start();  // run() => polymorphosim decide the method at runtime
         try{
@@ -36,9 +38,10 @@ public class DemoThreadCreation {
         } catch (InterruptedException e){
 
         };
-
         System.out.println(thread3.getStrings().size());
-        // thread2.start();
+
+
+
         System.out.println("Program ends..."); // this happends before the thread1 run
         //main thread would not wait thread1 to complete.
         //main thread would proceed without waiting for thread1

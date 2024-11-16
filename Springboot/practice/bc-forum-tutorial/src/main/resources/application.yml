@@ -1,0 +1,21 @@
+server:
+  port: 7070
+
+api:
+  jsonplaceholder:
+    domain: "jsonplaceholder.typicode.com"
+    endpoint:
+      user: "users"
+      post: "posts"
+      comment: "comments"
+
+spring:
+  datasource:
+    driverClassName: "org.postgresql.Driver"
+    url: "jdbc:postgresql://localhost:5432/bc2405p_db"
+    username: postgres
+    password: admin1234
+  jpa:   
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop

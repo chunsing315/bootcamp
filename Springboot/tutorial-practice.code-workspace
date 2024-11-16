@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "practice/tutorial-practice"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}

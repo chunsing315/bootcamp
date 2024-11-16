@@ -1,0 +1,20 @@
+package com.bootcamp.demo.demo_restapi.bootcamp;
+
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
+public class UrlManager {
+    private Scheme scheme;
+    private String domain;
+    private String endpoint;
+
+    @Override
+    public String toString() {
+        // what if we want support http?
+        return this.scheme.getUrlPrefix() //
+                .concat(this.domain)
+                .concat(this.endpoint);
+    }
+}
